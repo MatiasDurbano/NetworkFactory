@@ -8,7 +8,7 @@
 module TwitterMock {
 	exports com.TwitterMock;
 	requires RedSocialInterface;
-	uses com.RedSocial.Red;
-	provides com.RedSocial.Red with com.TwitterMock.TwitterMockRedImpl;
+	uses com.RedSocial.Network;
+	provides com.RedSocial.Network with com.TwitterMock.TwitterMockRedImpl;
 	
 }

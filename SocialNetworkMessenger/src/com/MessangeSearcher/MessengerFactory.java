@@ -1,35 +1,28 @@
 package com.MessangeSearcher;
 
 import java.io.IOException;
+import java.io.PipedInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.RedSocial.Red;
+import com.RedSocial.Network;
 
 public class MessengerFactory {
 	
 	
 	private Messenger messeger;
-	private MessageReader readerMessage;
+
 	
 	
-	public MessengerFactory(List<Red> redes) {
+	public MessengerFactory(List<Network> redes) {
 		messeger = new Messenger(redes);
-		readerMessage = new MessageReader();
 			
 	}
 	
-	public List<String> searchMessage() {
+	public PipedInputStream searchMessage() throws IOException {
 		
-		try {
-		
-			return this.readerMessage.getMessages(this.messeger.getMessage());
-		
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return new ArrayList<String>();
-		
+		return this.messeger.getMessage();	
+	
 	}
 	
 }

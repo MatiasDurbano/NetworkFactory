@@ -3,12 +3,12 @@ package com.factory;
 
 import java.util.List;
 
-import com.RedSocial.Red;
+import com.RedSocial.Network;
 
 public interface SocialNetworkFactory {
 
-	public Red create(String c);
+	public Network create(String c);
 
-	public List<Red> crearInstancias(List<String> files);
+	public List<Network> crearInstancias(List<String> files);
 	
 }

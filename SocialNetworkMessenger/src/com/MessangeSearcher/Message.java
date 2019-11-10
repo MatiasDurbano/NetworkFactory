@@ -5,36 +5,22 @@ import java.io.PipedOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.RedSocial.Red;
+import com.RedSocial.Network;
 
 public class Message {
 
-	private List<Red> redes;
+	private List<Network> redes;
 	
-	public Message(List<Red> redes) {
+	public Message(List<Network> redes) {
 		this.redes = redes;
 	}
 	
 	public void getMessages(PipedOutputStream pipedOutput) {
 		
-		for(Red red : this.redes) {
-			this.saveMessage(pipedOutput, red.get());
+		for(Network red : this.redes) {
+			red.get(pipedOutput);
 		}
 	
-	}
-	
-	private void saveMessage(PipedOutputStream pipedOutput, List<String> messages) {
-		try {
-		
-			for(String message : messages) {
-				pipedOutput.write(message.getBytes());
-			}
-		
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 	}
 	
 	

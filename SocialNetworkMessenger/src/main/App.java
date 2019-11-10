@@ -11,8 +11,13 @@ public class App {
 	public static void main(String[] args) throws IOException {
 		
 		MessengerFactory mController= new MessengerFactory(Initializer.getInitialize());
-	    List<String> mensajes= mController.searchMessage();
-	    System.out.println("MENSAJES : "+mensajes.size());
+		MessageReader reader = new MessageReader();
+		
+		List<String> msgs = reader.getMessages(mController.searchMessage());
+		for (String msg : msgs) {
+			System.out.println(msg);
+		}
+	    
 	    
 	}
 

@@ -7,7 +7,7 @@
  */
 module FacebookMock {
 	exports com.FacebookMock;
-	requires RedSocialInterface;
-	uses com.RedSocial.Red;
-	provides com.RedSocial.Red with com.FacebookMock.FacebookRedImpl;
+	requires SocialNetworkInterface;
+	uses com.RedSocial.Network;
+	provides com.RedSocial.Network with com.FacebookMock.FacebookRedImpl;
 }

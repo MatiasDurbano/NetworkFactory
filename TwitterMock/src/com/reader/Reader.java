@@ -15,6 +15,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.TwitterMock.TwitterMockObject;
+
 public class Reader {
 	private FileReader f;
 	private BufferedReader b;
@@ -31,14 +33,15 @@ public class Reader {
 		}
 	}
 	
-	public List<String> getMessages() throws IOException {
-		List<String> ret = new ArrayList<String>();
+	public List<TwitterMockObject> getMessages() throws IOException {
+		List<TwitterMockObject> ret = new ArrayList<TwitterMockObject>();
         String cadena;
       
         do {
         	cadena = b.readLine();
         	if(cadena!=null) {
-        		ret.add(cadena);
+        		
+        		ret.add(new TwitterMockObject(cadena));
         	}
         }while(cadena!=null);
        

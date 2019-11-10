@@ -5,26 +5,27 @@ import java.io.PipedOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.RedSocial.Red;
+import com.RedSocial.Adapter;
+import com.RedSocial.Network;
 import com.reader.Reader;
 
-public class TwitterMockRedImpl implements Red {
-
+public class TwitterMockRedImpl implements Network {
+	
 	@Override
-	public List<String> get() {
-		List<String> ret = new ArrayList<String>();
+	public void get(PipedOutputStream pip) {
 		try {	
 			
 			Reader reader = new Reader();
-			for(String str :reader.getMessages()) {
-				ret.add(str);
+			Adapter adapter = new AdapterImp();
+			
+			for(String str : adapter.getMessageObject(reader.getMessages())) {
+				pip.write(str.getBytes());
 			}
 			
 		
 		} catch (IOException e) {
 			e.printStackTrace(System.out);
 		}
-		return ret;
 	    
 	}
 

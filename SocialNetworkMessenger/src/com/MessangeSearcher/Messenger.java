@@ -10,7 +10,7 @@ import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.util.List;
 
-import com.RedSocial.Red;
+import com.RedSocial.Network;
 
 public class Messenger {
 	
@@ -18,7 +18,7 @@ public class Messenger {
 	private PipedOutputStream pipedOutput;
 	private Message message;
 	
-	public Messenger(List<Red> redes) {
+	public Messenger(List<Network> redes) {
 
 		try {
 			message = new Message(redes);
@@ -33,7 +33,7 @@ public class Messenger {
 		}
 	}
 	
-	public Messenger(List<Red> redes, PipedOutputStream pipedOutput) {
+	public Messenger(List<Network> redes, PipedOutputStream pipedOutput) {
 
 		try {
 			

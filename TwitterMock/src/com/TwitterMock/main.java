@@ -1,7 +1,7 @@
 package com.TwitterMock;
 
 
-import com.RedSocial.Red;
+import com.RedSocial.Network;
 
 
 public class main {

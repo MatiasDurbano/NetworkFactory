@@ -1,4 +1,4 @@
-package com.RedSocial;
+package com.Network;
 
 import java.io.PipedOutputStream;
 import java.util.List;

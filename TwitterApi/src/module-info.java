@@ -11,7 +11,7 @@ module TwitterApi {
 	requires Properties;
 	requires org.twitter4j.core;
 	
-	uses com.RedSocial.Red;
-	provides com.RedSocial.Red with com.Twitter.TwitterRedImpl;
+	uses com.Network.Red;
+	provides com.Network.Red with com.Twitter.TwitterRedImpl;
 	
 }

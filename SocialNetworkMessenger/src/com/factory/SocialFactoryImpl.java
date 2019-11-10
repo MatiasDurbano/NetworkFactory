@@ -9,27 +9,27 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import com.RedSocial.Red;
+import com.RedSocial.Network;
 
 public class SocialFactoryImpl implements SocialNetworkFactory{
 	
-	List<Red> redes;
+	List<Network> redes;
 	
 	public SocialFactoryImpl() {
-		redes= new ArrayList<Red>();
-		ServiceLoader<Red> loader = ServiceLoader.load(Red.class);
-        Iterable<Red> iterable = () -> loader.iterator();
-        Stream<Red> stream = StreamSupport.stream(iterable.spliterator(), false);
+		redes= new ArrayList<Network>();
+		ServiceLoader<Network> loader = ServiceLoader.load(Network.class);
+        Iterable<Network> iterable = () -> loader.iterator();
+        Stream<Network> stream = StreamSupport.stream(iterable.spliterator(), false);
         List<Class> locales = stream.map(i -> i.getClass()).collect(Collectors.toList());
         for(Class local: locales) {
         	try {
         	
         	Class<?>  clz = Class.forName(local.getName());
-        	Class<? extends Red> sub = clz.asSubclass(Red.class);
+        	Class<? extends Network> sub = clz.asSubclass(Network.class);
         	/* Get the default constructor. */
-        	Constructor<? extends Red> ctor = sub.getConstructor();
+        	Constructor<? extends Network> ctor = sub.getConstructor();
         	/* Create an instance of "MyCustomAction". */
-        	Red custom = ctor.newInstance();
+        	Network custom = ctor.newInstance();
         	//System.out.println(custom.getClass().getName());
         	redes.add(custom);
         	}catch (ClassNotFoundException | NoSuchMethodException | SecurityException | InstantiationException
@@ -40,8 +40,8 @@ public class SocialFactoryImpl implements SocialNetworkFactory{
         }
 	}
 	
-	public Red create(String c) {
-		for(Red red: redes) {
+	public Network create(String c) {
+		for(Network red: redes) {
 			if(red.getClass().getName().equals(c)) {
 				return red;
 			}
@@ -50,8 +50,8 @@ public class SocialFactoryImpl implements SocialNetworkFactory{
 	}
 
 	@Override
-	public List<Red> crearInstancias(List<String> files) {
-		List<Red> ret = new ArrayList<Red>();
+	public List<Network> crearInstancias(List<String> files) {
+		List<Network> ret = new ArrayList<Network>();
 		for(String file: files) {
 			ret.add(create(file));
 		}
