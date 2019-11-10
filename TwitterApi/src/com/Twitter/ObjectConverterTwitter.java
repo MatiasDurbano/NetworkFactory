@@ -3,7 +3,7 @@ package com.Twitter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.Network.ObjectConverter;
+import com.Network2.ObjectConverter;
 
 import twitter4j.Status;
 

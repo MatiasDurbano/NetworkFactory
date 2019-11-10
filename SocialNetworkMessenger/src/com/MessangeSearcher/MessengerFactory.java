@@ -5,7 +5,7 @@ import java.io.PipedInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.RedSocial.Network;
+import com.Network.Network;
 
 public class MessengerFactory {
 	

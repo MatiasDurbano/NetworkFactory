@@ -2,7 +2,7 @@ package com.TwitterApi;
 
 import java.util.List;
 
-import com.Network.Red;
+import com.Network2.Red;
 import com.Twitter.TwitterRedImpl;
 
 

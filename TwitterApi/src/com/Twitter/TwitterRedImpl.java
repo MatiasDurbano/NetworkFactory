@@ -1,8 +1,8 @@
 package com.Twitter;
 import java.util.List;
 
-import com.Network.ObjectConverter;
-import com.Network.Red;
+import com.Network2.ObjectConverter;
+import com.Network2.Red;
 import com.propertiesTwitter.PropertiesLoaderTwitter;
 
 

@@ -3,7 +3,7 @@ package com.factory;
 
 import java.util.List;
 
-import com.RedSocial.Network;
+import com.Network.Network;
 
 public interface SocialNetworkFactory {
 

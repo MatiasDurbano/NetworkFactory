@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import com.MessangeSearcher.MessengerFactory;
-import com.RedSocial.Network;
+import com.Network.Network;
 import com.Searcher.JavaSearcher;
 import com.factory.SocialNetworkFactory;
 import com.factory.SocialFactoryImpl;

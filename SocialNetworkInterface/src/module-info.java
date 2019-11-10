@@ -5,6 +5,6 @@
  * @author Matias
  *
  */
-module RedSocialInterface{
-	exports com.RedSocial;
+module SocialNetworkInterface{
+	exports com.Network;
 }

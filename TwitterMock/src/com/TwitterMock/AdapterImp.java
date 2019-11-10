@@ -3,7 +3,7 @@ package com.TwitterMock;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.RedSocial.Adapter;
+import com.Network.Adapter;
 
 public class AdapterImp implements Adapter{
 

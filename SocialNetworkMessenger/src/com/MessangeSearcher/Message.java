@@ -5,7 +5,7 @@ import java.io.PipedOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.RedSocial.Network;
+import com.Network.Network;
 
 public class Message {
 

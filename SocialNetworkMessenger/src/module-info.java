@@ -7,7 +7,7 @@
  */
 module RedSocial {
 	//exports com.MessageManager;
-	requires transitive RedSocialInterface;
+	requires transitive SocialNetworkInterface;
 	requires transitive Properties;
-	uses com.RedSocial.Network;
+	uses com.Network.Network;
 }

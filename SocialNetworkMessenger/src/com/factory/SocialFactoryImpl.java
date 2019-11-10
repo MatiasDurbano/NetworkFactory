@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import com.RedSocial.Network;
+import com.Network.Network;
 
 public class SocialFactoryImpl implements SocialNetworkFactory{
 	
