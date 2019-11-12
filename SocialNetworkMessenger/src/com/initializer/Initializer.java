@@ -6,8 +6,7 @@ import java.util.List;
 import com.MessangeSearcher.MessengerFactory;
 import com.Network.Network;
 import com.Searcher.JavaSearcher;
-import com.factory.SocialNetworkFactory;
-import com.factory.SocialFactoryImpl;
+import com.factory.SocialFactory;
 
 
 public class Initializer {
@@ -20,8 +19,8 @@ public class Initializer {
      
      public static List<Network> getInitialize() throws IOException {
     	 JavaSearcher searcher = new JavaSearcher();
-    	 SocialNetworkFactory socialFactory= new SocialFactoryImpl();
-    	 List<Network> redes = socialFactory.crearInstancias(searcher.getFiles());
+    	 SocialFactory socialFactory= new SocialFactory();
+    	 List<Network> redes = socialFactory.createInstances(searcher.getFiles());
     	 return redes;
     	 
      }

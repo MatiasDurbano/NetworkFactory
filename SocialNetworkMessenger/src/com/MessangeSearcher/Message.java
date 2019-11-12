@@ -9,15 +9,15 @@ import com.Network.Network;
 
 public class Message {
 
-	private List<Network> redes;
+	private List<Network> networks;
 	
 	public Message(List<Network> redes) {
-		this.redes = redes;
+		this.networks = redes;
 	}
 	
 	public void getMessages(PipedOutputStream pipedOutput) {
 		
-		for(Network red : this.redes) {
+		for(Network red : this.networks) {
 			red.get(pipedOutput);
 		}
 	

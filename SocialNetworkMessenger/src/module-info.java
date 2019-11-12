@@ -5,7 +5,7 @@
  * @author Matias
  *
  */
-module RedSocial {
+module SocialNetworkMesenger {
 	//exports com.MessageManager;
 	requires transitive SocialNetworkInterface;
 	requires transitive Properties;
